@@ -15,6 +15,7 @@ const express = require('express');
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+   app.get('/', (req, res) => res.send('API Running'))
    // Routes
    app.use('/api/bills', require('./routes/billRoutes'));
    app.use('/api/customers', require('./routes/customerRoutes'));
