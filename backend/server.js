@@ -8,10 +8,7 @@ const express = require('express');
    // Middleware
    app.use(express.json());
   app.use(cors({
-  origin: [
-    "http://localhost:3001",               // local frontend
-    "https://dukaan-hisaab.vercel.app"  // deployed frontend
-  ],
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
